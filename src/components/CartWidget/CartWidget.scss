@@ -1,0 +1,10 @@
+.cart {
+  font-size: 20px;
+  margin-bottom: 3px;
+  @media (min-width: 768px) {
+    position: relative;
+    left: 96%;
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+}
