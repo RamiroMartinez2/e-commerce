@@ -1,6 +1,9 @@
 .cart {
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 12%;
   font-size: 20px;
-  margin-bottom: 3px;
   @media (min-width: 768px) {
     position: relative;
     left: 96%;
@@ -8,3 +11,24 @@
     margin-bottom: 0;
   }
 }
+
+.position-cart {
+  display: none;
+  @media (min-width: 768px) {
+    position: relative;
+    left: 96%;
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+}
+// .position {
+//   position: relative;
+//   left: 102%;
+//   bottom: 8rem;
+//   @media (min-width: 768px) {
+//     position: relative;
+//     left: 96%;
+//     font-size: 25px;
+//     margin-bottom: 0;
+//   }
+// }
