@@ -8,6 +8,10 @@
   min-width: 320px;
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
+  @media (min-width: 768px) {
+    width: 100%;
+   overflow: hidden;
+  }
   .menu-button {
     font-size: 30px;
     @media (min-width: 768px) {
@@ -70,7 +74,6 @@
       line-height: 54px;
       transition: all 1.5s ease;
       border-bottom: 1px solid #e5e5e5;
-      border-top: 1px solid #e5e5e5;
       position: absolute;
       top: 2rem;
       margin-left: 0%;

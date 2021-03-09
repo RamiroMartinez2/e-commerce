@@ -5,8 +5,11 @@ import { ItemListContainer } from "./containers/ItemListContainer/ItemListContai
 function App() {
   return (
     <>
-      <NavBar />
+    <div>
+        <NavBar />
       <ItemListContainer greeting="Hi this is my e-commerce"/>
+    </div>
+    
     </>
   );
 }
