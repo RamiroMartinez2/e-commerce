@@ -26,8 +26,9 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
       <label>Cantidad</label>
       <div>
         <p>
-          {counter > stock ? (
+          {counter > stock || stock === 0 ? (
             <div>No puedes agregar mas productos</div>
+            
           ) : (
             <div>{counter}</div>
           )}
