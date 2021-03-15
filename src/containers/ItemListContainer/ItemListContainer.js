@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { ItemCount } from "../../components/ItemCount/ItemCount";
+import ItemList from "../../components/ItemList/ItemList";
 import "./ItemListContainer.scss";
 
 export const ItemListContainer = (props) => {
+
   const [stockActual, setStockActual] = useState(5);
 
   const restarStock = (e, nuevoStock) => {
@@ -15,10 +17,11 @@ export const ItemListContainer = (props) => {
 
   return (
     <>
-      <section>
+      {/* <section>
         <h1>{props.greeting}</h1>
-      </section>
+      </section> */}
       <ItemCount stock={stockActual} initial={1} onAdd={restarStock} />
+      <ItemList items={props.items}/>
     </>
   );
 };
