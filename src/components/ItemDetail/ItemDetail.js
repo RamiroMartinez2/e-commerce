@@ -9,8 +9,8 @@ const ItemDetail = (props) => {
         <>
           <img className="detail-img" src={i.pictureUrl} alt="" srcset="" />
           <p className="price">{i.price}</p>
-          <h2>Description</h2>
-          <p>{i.description}</p>
+          <h2 className="title-description">Description</h2>
+          <p className="description">{i.description}</p>
           <ItemCount stock={props.stockActual} initial={1} onAdd={props.restarStock} />
         </>
       ))}

@@ -11,7 +11,7 @@ const Item = (props) => {
       <h2 className='title'>{props.item.title}</h2>
       <p className='title'>{props.item.capacity} - {props.item.color} </p>
       <p className='price'>{props.item.price}</p>
-      <p className='add'>ADD TO CART</p>
+      <p className='add'>SEE MORE</p>
     </>
   );
 };
