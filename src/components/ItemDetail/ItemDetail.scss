@@ -1,0 +1,11 @@
+.item-detail {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  .detail-img {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

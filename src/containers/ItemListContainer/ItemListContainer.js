@@ -20,7 +20,6 @@ export const ItemListContainer = (props) => {
       {/* <section>
         <h1>{props.greeting}</h1>
       </section> */}
-      <ItemCount stock={stockActual} initial={1} onAdd={restarStock} />
       <ItemList items={props.items}/>
     </>
   );

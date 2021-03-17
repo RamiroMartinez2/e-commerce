@@ -17,8 +17,6 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <form>
-      <label>Producto</label>
-      <p>Iphone X</p>
       <p>
         Stock:
         {stock <= -1 ? <div>0</div> : <div>{stock}</div>}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { NavBar } from "./components/NavBar/NavBar";
 import { ItemListContainer } from "./containers/ItemListContainer/ItemListContainer";
 import data from "./data/data";
+import ItemDetailContainer from "./containers/ItemDetailContainer/ItemDetailContainer";
 function App() {
   const [items, setItems] = useState();
 
@@ -22,6 +23,7 @@ function App() {
       <div>
         <NavBar />
         <ItemListContainer items={items} greeting="Hi this is my e-commerce" />
+        <ItemDetailContainer/>
       </div>
     </>
   );
