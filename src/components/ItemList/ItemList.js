@@ -1,15 +1,16 @@
 import React from 'react'
 import Item from '../Item/Item'
+import './ItemList.scss'
 
 
 const ItemList = (props) => {
    
     return (
-        <div>
+        <main className="main">
            {
                props.items?.map((x)=> <Item item={x}/>)
            }
-        </div>
+        </main>
     )
 }
 

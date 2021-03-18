@@ -1,46 +1,34 @@
 import React, { useState } from "react";
+import './ItemCount.scss'
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
+export const ItemCount = ({ stock, initial = 1, onAdd }) => {
   const [counter, setCounter] = useState(initial);
 
   const sumarUno = (e) => {
     e.preventDefault();
-    setCounter(counter + 1);
+
+    if (counter < stock) {
+      setCounter(counter + 1);
+    }
   };
 
   const restarUno = (e) => {
     e.preventDefault();
-    if (counter > 0) {
+    if (counter > 1) {
       setCounter(counter - 1);
     }
   };
 
   return (
-    <form>
-      <p>
-        Stock:
-        {stock <= -1 ? <div>0</div> : <div>{stock}</div>}
-      </p>
-      <label>Cantidad</label>
-      <div>
-        <p>
-          {counter > stock || stock === 0 ? (
-            <div>No puedes agregar mas productos</div>
-          ) : (
-            <div>{counter}</div>
-          )}
-        </p>
-        <button onClick={(e) => restarUno(e)} type="submit">
-          -
-        </button>
-        <button onClick={(e) => sumarUno(e)} type="submit">
-          +
-        </button>
+    <form className="form">
+      <div className="container-input">
+        <button className="button" onClick={restarUno}>-</button>
+        <input className="input" value={counter} />
+        <button className="button" onClick={sumarUno}>+</button>
       </div>
-
-      <button onClick={(e) => onAdd(e, counter)} type="submit">
-        Agregar al carrito
-      </button>
+      <div className="container-button">
+        <button className="button-add" onClick={(e) => onAdd(e, counter)}>Add to cart</button>
+      </div>
     </form>
   );
 };

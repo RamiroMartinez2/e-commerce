@@ -15,16 +15,15 @@ function App() {
         resolve(data);
       }, 2000);
     }).then((result) =>setItems(result.products));
-  });
+  },[]);
 
 
   return (
     <>
-      <div>
+     
         <NavBar />
-        <ItemListContainer items={items} greeting="Hi this is my e-commerce" />
+        <ItemListContainer items={items}/>
         <ItemDetailContainer/>
-      </div>
     </>
   );
 }

@@ -36,8 +36,8 @@ export const NavBar = () => {
             <li>iPhone</li>
             <li>iPad</li>
             <li>Mac</li>
-            <li>Watch</li>
-            <li>Accesorios</li>
+            <li>Products</li>
+            
           </ul>
         </nav>
       </header>
