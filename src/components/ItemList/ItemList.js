@@ -3,12 +3,13 @@ import Item from '../Item/Item'
 import './ItemList.scss'
 
 
-const ItemList = (props) => {
+const ItemList = ({items}) => {
+   
    
     return (
         <main className="main">
            {
-               props.items?.map((x)=> <Item item={x}/>)
+            items?.map((x)=> <Item item={x}/>)
            }
         </main>
     )

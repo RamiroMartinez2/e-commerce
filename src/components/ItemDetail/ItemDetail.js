@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ItemDetail.scss";
 import { ItemCount } from "../ItemCount/ItemCount";
+import { useParams } from "react-router-dom";
 
-const ItemDetail = (props) => {
+const ItemDetail = ({ itemDetail }) => {
+  const { id } = useParams();
+  const detailFilter = itemDetail.filter((item) => {
+    return item.id == id;
+  });
+
   const [stock, setStock] = useState(5);
 
   const onAdd = (e, q) => {
@@ -17,17 +23,17 @@ const ItemDetail = (props) => {
   };
 
   return (
-    <div className="item-detail">
-      {props.itemD?.map((i) => (
-        <>
-          <img className="detail-img" src={i.pictureUrl} alt="img" srcset="" />
+    <>
+      {detailFilter?.map((i) => (
+        <div className="item-detail" key={i.id}>
+          <img className="detail-img" src={i.pictureUrl} alt="img" />
           <p className="price">{i.price}</p>
           <h2 className="title-description">Description</h2>
           <p className="description">{i.description}</p>
           <ItemCount initial={1} stock={stock} onAdd={onAdd} />
-        </>
+        </div>
       ))}
-    </div>
+    </>
   );
 };
 

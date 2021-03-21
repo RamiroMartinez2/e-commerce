@@ -3,6 +3,7 @@ import "./NavBar.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLine } from "react-icons/ri";
 import { CartWidget } from "../CartWidget/CartWidget";
+import {Link} from "react-router-dom"
 
 export const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -36,7 +37,10 @@ export const NavBar = () => {
             <li>iPhone</li>
             <li>iPad</li>
             <li>Mac</li>
-            <li>Products</li>
+            <Link to="/">
+              <li>Products</li>
+            </Link>
+          
             
           </ul>
         </nav>

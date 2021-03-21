@@ -1,29 +1,24 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavBar } from "./components/NavBar/NavBar";
 import { ItemListContainer } from "./containers/ItemListContainer/ItemListContainer";
-import data from "./data/data";
 import ItemDetailContainer from "./containers/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 function App() {
-  const [items, setItems] = useState();
-
-  useEffect(() => {
-
-    new Promise((resolve, rejeted) => {
-
-      setTimeout(() => {
-        resolve(data);
-      }, 2000);
-    }).then((result) =>setItems(result.products));
-  },[]);
-
-
   return (
     <>
-     
+      <BrowserRouter>
         <NavBar />
-        <ItemListContainer items={items}/>
-        <ItemDetailContainer/>
+        <Switch>
+          <Route exact path="/">
+            <ItemListContainer />
+          </Route>
+          <Route exact path="/itemDetail/:id">
+            <ItemDetailContainer />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }
