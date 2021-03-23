@@ -8,12 +8,31 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .title-description{
+  .title-description {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  .description{
-      margin-left: 5%;
+  .description {
+    margin-left: 5%;
+  }
+  .link-cart {
+    text-decoration: none;
+    .container-button {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      .finish-button {
+        display: flex;
+        width: 40%;
+        padding: 10px;
+        background: red;
+        justify-content: center;
+        border: none;
+      }
+    }
   }
 }

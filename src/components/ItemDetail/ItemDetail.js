@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ItemDetail.scss";
 import { ItemCount } from "../ItemCount/ItemCount";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const ItemDetail = ({ itemDetail }) => {
   const { id } = useParams();
@@ -30,7 +30,15 @@ const ItemDetail = ({ itemDetail }) => {
           <p className="price">{i.price}</p>
           <h2 className="title-description">Description</h2>
           <p className="description">{i.description}</p>
-          <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+          {stock === 0 ? (
+            <Link className="link-cart" to="cart">
+              <div className="container-button">
+                <button className="finish-button">Finish my buy</button>
+              </div>
+            </Link>
+          ) : (
+            <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+          )}
         </div>
       ))}
     </>
