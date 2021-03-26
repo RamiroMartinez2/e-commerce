@@ -23,7 +23,7 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
     <form className="form">
       <div className="container-input">
         <button className="button" onClick={restarUno}>-</button>
-        <input className="input" value={counter} />
+        <input  className="input" value={counter}  onChange={(e)=> onAdd(e.target.value)}/>
         <button className="button" onClick={sumarUno}>+</button>
       </div>
       <div className="container-button">
