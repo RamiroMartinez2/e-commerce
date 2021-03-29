@@ -15,7 +15,6 @@ export const ItemListContainer = () => {
     }).then((result) => setItems(result.products));
   }, []);
 
-
   return (
     <>
       <ItemList items={items}/>

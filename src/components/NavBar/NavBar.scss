@@ -63,10 +63,12 @@
         width: 60%;
         z-index: 0;
       }
+
       li {
         align-self: center;
         margin-right: 10%;
         cursor: pointer;
+        color: black;
       }
     }
     .show {
@@ -83,6 +85,10 @@
       background: white;
       padding: 2rem;
       z-index: 1000000;
+      .link-nav{
+        text-decoration: none;
+        cursor: pointer;
+      }
 
       @media (min-width: 410px) {
         margin-left: 50%;

@@ -17,7 +17,7 @@ const Item = ({ item }) => {
           {item.capacity} - {item.color}{" "}
         </p>
         <p className="price">{item.price}</p>
-        <Link to={`/itemDetail/${item.id}`}>
+        <Link  to={`/itemDetail/${item.id}`}>
           <p className="add">SEE MORE</p>
         </Link>
       </div>
