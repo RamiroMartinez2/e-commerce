@@ -4,7 +4,7 @@ import { NavBar } from "../NavBar/NavBar";
 
 export const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
-  // console.log(cart)
+  console.log(cart)
   
   const clearCart = () => setCart([]);
   const deleteItem = (id) => {
@@ -20,9 +20,18 @@ export const Cart = () => {
 
       {cart.map((i) => (
         <div>
-          {i.detailFilter[0]?.title}
+          Product: {i.detailFilter[0]?.title}
+          <br/>
+          Price: USD {(i.detailFilter[0]?.price)*(i.q)}
+          <br/>
+          Capacity: {i.detailFilter[0]?.capacity}
+          <br/>
+          Quantity: {i.q}
+          <br/>
           <button onClick={()=> deleteItem(i.detailFilter[0]?.id)}>Delete product</button>
+          <br/>
           <button onClick={() => clearCart()}>Clear cart</button>
+          <br/>
         </div>
       ))}
 
