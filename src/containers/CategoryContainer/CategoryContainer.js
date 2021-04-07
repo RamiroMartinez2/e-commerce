@@ -13,7 +13,6 @@ const CategoryContainer = () => {
   const filterCategory = items?.filter((item) => {
     return item.category === category;
   });
-  console.log({ filterCategory });
 
   const getItems = () => {
     new Promise((resolve, rejeted) => {

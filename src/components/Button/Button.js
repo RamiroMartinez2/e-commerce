@@ -1,10 +1,13 @@
 import React from "react";
+import { useParams} from "react-router-dom";
 
-export const Button = ({ stock, initial = 1, onAdd, q }) => {
+export const Button = ({ stock, initial = 1, addToCart, q }) => {
+
+  const { id } = useParams();
   return (
     <>
       <div className="container-button">
-        <button onClick={()=> onAdd(q)} className="finish-button">Finish my buy</button>
+        <button onClick={()=> addToCart(q, id)} className="finish-button">Finish my buy</button>
       </div>
       ;
     </>
