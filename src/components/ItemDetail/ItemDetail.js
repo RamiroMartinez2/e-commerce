@@ -31,14 +31,7 @@ const ItemDetail = ({ itemDetail }) => {
     const detailFilter = itemDetail.filter((item) => {
       return item.id == id;
     });
-    setCart([...cart, { detailFilter, q }]);
-
-  //   Array.prototype.unique=function(a){
-  //     return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
-  //   });
-  
-  // console.log(detailFilter.unique());
-   
+      setCart([...cart, { detailFilter, q }]);
   };
 
   return (
